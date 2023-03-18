@@ -3,9 +3,8 @@ package AssignmentObjectContainers;
 import java.util.*;
 
 /**
- * Person , TreeSet?
+ * Person > Store Person in a TreeSet
  * properties : name, age
- * behavior : addPerson.
  * Iterate through the Treeset and print the name and age.
  * List of hobbies for people, storeHobbies
  * Hobby > properties : name, frequency (int) how many times a week, List of adress.
@@ -77,15 +76,17 @@ public class App {
         Map<Person, List<Hobby>> peopleMap = new HashMap<>();
 
         peopleMap.put(person1, person1.hobbies);
+
         peopleMap.put(person2, person2.hobbies);
 
         System.out.println(peopleMap);
+
         System.out.println("===========================================================================================================================");
 
-        System.out.println("Victor hobbies are " + person2.hobbies + " and they can be practiced in " +
-                address3.getCountry() + " and " + address1.getCountry());
 
 
+        System.out.println("Hobbies and country for a certain person: " + person2.name + "'s hobbies are "
+                            + peopleMap.get(person2));
     }
 
 }
